@@ -1,0 +1,76 @@
+name: Build and publish
+on:
+  push:
+    branches-ignore:
+      - stable
+      - beta
+      - develop
+  pull_request:
+    types: [closed]
+    branches:
+      - stable
+      - beta
+      - develop
+env:
+  NODE_VERSION: 20
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'yarn'
+
+    - name: Install project
+      run: yarn
+
+    - name: Build contracts
+      run: yarn compile
+
+    - name: Determine version
+      run: |
+        export BRANCH=${GITHUB_REF##*/}
+        echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+        echo "Branch $BRANCH"
+        export VERSION=$(bash ./scripts/calculate_version.sh)
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+        echo "Version $VERSION"
+        ( test $BRANCH = "stable" && export PRERELEASE=false ) || export PRERELEASE=true
+        echo "PRERELEASE=$PRERELEASE" >> $GITHUB_ENV
+
+    - name: Publish NPM package
+      run: ./scripts/publish_package.sh
+      env:
+        BRANCH: ${{ env.BRANCH }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    - name: Create Release
+      uses: ncipollo/release-action@v1
+      with:
+        tag: ${{ env.VERSION }}
+        prerelease: ${{ env.PRERELEASE }}
+
+  clean:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'yarn'
+
+    - name: Remove feature tag
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: |
+        export SOURCE_BRANCH=${GITHUB_HEAD_REF##*/}
+        echo "Source branch: $SOURCE_BRANCH"
+        npm dist-tag rm @skalenetwork/paymaster-interfaces $SOURCE_BRANCH
