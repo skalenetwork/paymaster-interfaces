@@ -9,6 +9,12 @@ then
     echo "$USAGE_MSG"
     exit 1
 fi
+if [ -z "$NODE_AUTH_TOKEN" ]
+then
+    (>&2 echo 'You should provide a node auth token')
+    echo "$USAGE_MSG"
+    exit 2
+fi
 
 cd "$(dirname "$0")/.."
 
