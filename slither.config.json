@@ -1,4 +1,5 @@
 {
-    "filter_paths": "@openzeppelin/contracts/",
-    "detectors_to_exclude": "solc-version"
+    "filter_paths": "@openzeppelin/contracts",
+    "detectors_to_exclude": "solc-version,unused-import",
+    "comments": "TODO: enable unused-import when false positive in @openzeppelin/contracts will be fixed"
 }
