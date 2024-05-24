@@ -38,5 +38,7 @@ cp LICENSE contracts
 cp README.md contracts
 cp package.json contracts
 
+cd contracts
+
 yarn config set npmAuthToken "$NODE_AUTH_TOKEN"
 yarn npm publish --access public $TAG
