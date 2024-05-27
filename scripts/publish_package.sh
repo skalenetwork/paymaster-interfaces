@@ -36,9 +36,9 @@ echo "Using $VERSION as a new version"
 
 cp LICENSE contracts
 cp README.md contracts
-rm package.json
 
 cd contracts
+touch yarn.lock
 
 # set version
 package="$(jq --arg v "$VERSION" '.version = $v' package.json)"
