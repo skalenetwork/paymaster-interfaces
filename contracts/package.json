@@ -8,7 +8,5 @@
   "files": [
     "**/*.sol",
     "/artifacts/contracts/*.json"
-  ],
-  "dependencies": {},
-  "devDependencies": {}
+  ]
 }

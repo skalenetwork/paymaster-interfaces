@@ -39,6 +39,7 @@ cp README.md contracts
 
 cd contracts
 touch yarn.lock
+yarn
 
 # set version
 package="$(jq --arg v "$VERSION" '.version = $v' package.json)"
