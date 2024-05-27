@@ -36,7 +36,7 @@ echo "Using $VERSION as a new version"
 
 cp LICENSE contracts
 cp README.md contracts
-cp package.json contracts
+rm package.json
 
 cd contracts
 
