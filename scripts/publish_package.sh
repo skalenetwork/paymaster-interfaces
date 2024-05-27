@@ -38,12 +38,14 @@ cp LICENSE contracts
 cp README.md contracts
 
 cd contracts
-touch yarn.lock
-yarn
 
 # set version
 package="$(jq --arg v "$VERSION" '.version = $v' package.json)"
 echo -E "${package}" > package.json
 
+touch yarn.lock
+yarn
+
+yarn config set enableImmutableInstalls false
 yarn config set npmAuthToken "$NODE_AUTH_TOKEN"
 yarn npm publish --access public $TAG
