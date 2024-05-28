@@ -24,7 +24,8 @@ pragma solidity ^0.8.20;
 // cspell:words IERC20
 
 import {Months, Seconds, Timestamp} from "./IDateTimeUtils.sol";
-import {SKL, USD} from "./Types.sol";
+import {SKL} from "./types/Skl.sol";
+import {USD} from "./types/Usd.sol";
 
 
 type SchainHash is bytes32;
