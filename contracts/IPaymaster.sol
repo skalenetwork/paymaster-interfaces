@@ -23,6 +23,7 @@ pragma solidity ^0.8.20;
 
 // cspell:words IERC20
 
+import {IERC20} from "@openzeppelin/contracts/interfaces/IERC20.sol";
 import {Months, Seconds, Timestamp} from "./DateTimeUtils.sol";
 import {SKL} from "./types/Skl.sol";
 import {USD} from "./types/Usd.sol";
@@ -43,7 +44,7 @@ interface IPaymaster {
     function setSchainPrice(USD price) external;
     function setSklPrice(USD price) external;
     function setAllowedSklPriceLag(Seconds lagSeconds) external;
-    function setSkaleToken(address token) external;
+    function setSkaleToken(IERC20 token) external;
     function setVersion(string calldata newVersion) external;
     function clearHistory(Timestamp before) external;
     function pay(SchainHash schainHash, Months duration) external;
