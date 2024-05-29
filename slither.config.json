@@ -1,5 +1,5 @@
 {
-    "filter_paths": "@openzeppelin/contracts",
-    "detectors_to_exclude": "solc-version,unused-import",
-    "comments": "TODO: enable unused-import when false positive in @openzeppelin/contracts will be fixed"
+    "filter_paths": "node_modules|solidity-datetime",
+    "detectors_to_exclude": "solc-version,unused-import,pragma",
+    "comments": "TODO:\nenable unused-import when false positive in @openzeppelin/contracts will be fixed\nenable pragma when false positive in @quant-finance/solidity-datetime will be fixed"
 }

@@ -1129,6 +1129,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@quant-finance/solidity-datetime@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@quant-finance/solidity-datetime@npm:2.2.0"
+  checksum: 10c0/0698337dd672b70895917bb6f6844f422b6224b21856d651e678fc7b43d3cb1c52e4c16854e6c9c932fba53612db154955d0e058a4582e8386259b4329ef581a
+  languageName: node
+  linkType: hard
+
 "@scure/base@npm:~1.1.0":
   version: 1.1.6
   resolution: "@scure/base@npm:1.1.6"
@@ -1251,6 +1258,7 @@ __metadata:
   resolution: "@skalenetwork/paymaster-interfaces@workspace:."
   dependencies:
     "@openzeppelin/contracts": "npm:^5.0.2"
+    "@quant-finance/solidity-datetime": "npm:^2.2.0"
     "@types/node": "npm:^20.12.12"
     cspell: "npm:^8.8.3"
     hardhat: "npm:^2.22.4"

@@ -23,6 +23,7 @@ pragma solidity ^0.8.20;
 
 // cspell:words IERC20
 
+import {Months, Seconds, Timestamp} from "./DateTimeUtils.sol";
 import {SKL} from "./types/Skl.sol";
 import {USD} from "./types/Usd.sol";
 
@@ -38,14 +39,14 @@ interface IPaymaster {
     function removeValidator(ValidatorId id) external;
     function setNodesAmount(ValidatorId id, uint256 amount) external;
     function setActiveNodes(ValidatorId id, uint256 amount) external;
-    function setMaxReplenishmentPeriod(uint256 months) external;
+    function setMaxReplenishmentPeriod(Months months) external;
     function setSchainPrice(USD price) external;
     function setSklPrice(USD price) external;
-    function setAllowedSklPriceLag(uint256 lagSeconds) external;
+    function setAllowedSklPriceLag(Seconds lagSeconds) external;
     function setSkaleToken(address token) external;
     function setVersion(string calldata newVersion) external;
-    function clearHistory(uint256 before) external;
-    function pay(SchainHash schainHash, uint256 duration) external;
+    function clearHistory(Timestamp before) external;
+    function pay(SchainHash schainHash, Months duration) external;
     function claim(address to) external;
     function claimFor(ValidatorId validatorId, address to) external;
     function getSchainExpirationTimestamp(
@@ -53,19 +54,19 @@ interface IPaymaster {
     )
         external
         view
-        returns (uint256 expiration);
+        returns (Timestamp expiration);
     function getRewardAmount(ValidatorId validatorId) external view returns (SKL reward);
     function getNodesNumber(ValidatorId validatorId) external view returns (uint256 number);
     function getActiveNodesNumber(ValidatorId validatorId) external view returns (uint256 number);
     function getHistoricalActiveNodesNumber(
         ValidatorId validatorId,
-        uint256 when
+        Timestamp when
     )
         external
         view
         returns (uint256 number);
     function getHistoricalTotalActiveNodesNumber(
-        uint256 when
+        Timestamp when
     )
         external
         view
@@ -73,5 +74,5 @@ interface IPaymaster {
     function getValidatorsNumber() external view returns (uint256 number);
     function getSchainsNames() external view returns (string[] memory names);
     function getSchainsNumber() external view returns (uint256 number);
-    function getTotalReward(uint256 from, uint256 to) external view returns (SKL reward);
+    function getTotalReward(Timestamp from, Timestamp to) external view returns (SKL reward);
 }
