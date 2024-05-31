@@ -6,6 +6,12 @@ updates:
     interval: "weekly"
     day: "saturday"
 
+- package-ecosystem: "npm"
+  directory: "/contracts/"
+  schedule:
+    interval: "weekly"
+    day: "saturday"
+
 - package-ecosystem: "pip"
   directory: "/scripts/"
   schedule:

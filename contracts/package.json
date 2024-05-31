@@ -9,5 +9,8 @@
     "*.sol",
     "**/*.sol",
     "/artifacts/contracts/*.json"
-  ]
+  ],
+  "dependencies": {
+    "@quant-finance/solidity-datetime": "^2.2.0"
+  }
 }
