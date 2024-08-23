@@ -4462,8 +4462,8 @@ __metadata:
   linkType: hard
 
 "solhint@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "solhint@npm:5.0.1"
+  version: 5.0.3
+  resolution: "solhint@npm:5.0.3"
   dependencies:
     "@solidity-parser/parser": "npm:^0.18.0"
     ajv: "npm:^6.12.6"
@@ -4489,7 +4489,7 @@ __metadata:
       optional: true
   bin:
     solhint: solhint.js
-  checksum: 10c0/0da4ce2aca4fcd2bb74a7d656f359940cb5c7059101db7d5f25ef31708763a8e8362480c20ee8dd525ded6ec897b328aa0e9b86b79ffaa59585c5c59722612dc
+  checksum: 10c0/262e86a8932d7d4d6ebae2a9d7317749e5068092e7cdf4caf07ac39fc72bd2c94f3907daaedcad37592ec001b57caed6dc5ed7c3fd6cd18b6443182f38c1715e
   languageName: node
   linkType: hard
 
