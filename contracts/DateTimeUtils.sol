@@ -44,6 +44,7 @@ using {
 } for Months global;
 using {
     _timestampLess as <,
+    _timestampGreater as >,
     _timestampEqual as ==,
     _timestampNotEqual as !=
 } for Timestamp global;
@@ -69,6 +70,10 @@ function _monthsEqual(Months a, Months b) pure returns (bool equal) {
 
 function _timestampLess(Timestamp left, Timestamp right) pure returns (bool result) {
     return Timestamp.unwrap(left) < Timestamp.unwrap(right);
+}
+
+function _timestampGreater(Timestamp left, Timestamp right) pure returns (bool result) {
+    return Timestamp.unwrap(left) > Timestamp.unwrap(right);
 }
 
 function _timestampEqual(Timestamp left, Timestamp right) pure returns (bool result) {
