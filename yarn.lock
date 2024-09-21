@@ -1859,22 +1859,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:^3.4.0":
-  version: 3.6.0
-  resolution: "chokidar@npm:3.6.0"
+"chokidar@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "chokidar@npm:4.0.0"
   dependencies:
-    anymatch: "npm:~3.1.2"
-    braces: "npm:~3.0.2"
-    fsevents: "npm:~2.3.2"
-    glob-parent: "npm:~5.1.2"
-    is-binary-path: "npm:~2.1.0"
-    is-glob: "npm:~4.0.1"
-    normalize-path: "npm:~3.0.0"
-    readdirp: "npm:~3.6.0"
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  checksum: 10c0/8361dcd013f2ddbe260eacb1f3cb2f2c6f2b0ad118708a343a5ed8158941a39cb8fb1d272e0f389712e74ee90ce8ba864eece9e0e62b9705cb468a2f6d917462
+    readdirp: "npm:^4.0.1"
+  checksum: 10c0/42d03c53b0ad200689e4fae7763133561480561cab8ba5304e8f2298ff45ff84bf0f6065c3f02b9e557b74b156813734439a1a2ff19a1ea6b35692395cd92738
   languageName: node
   linkType: hard
 
@@ -2865,8 +2855,8 @@ __metadata:
   linkType: hard
 
 "hardhat@npm:^2.22.4":
-  version: 2.22.10
-  resolution: "hardhat@npm:2.22.10"
+  version: 2.22.11
+  resolution: "hardhat@npm:2.22.11"
   dependencies:
     "@ethersproject/abi": "npm:^5.1.2"
     "@metamask/eth-sig-util": "npm:^4.0.0"
@@ -2883,7 +2873,7 @@ __metadata:
     ansi-escapes: "npm:^4.3.0"
     boxen: "npm:^5.1.2"
     chalk: "npm:^2.4.2"
-    chokidar: "npm:^3.4.0"
+    chokidar: "npm:^4.0.0"
     ci-info: "npm:^2.0.0"
     debug: "npm:^4.1.1"
     enquirer: "npm:^2.3.0"
@@ -2896,6 +2886,7 @@ __metadata:
     glob: "npm:7.2.0"
     immutable: "npm:^4.0.0-rc.12"
     io-ts: "npm:1.10.4"
+    json-stream-stringify: "npm:^3.1.4"
     keccak: "npm:^3.0.2"
     lodash: "npm:^4.17.11"
     mnemonist: "npm:^0.38.0"
@@ -2921,7 +2912,7 @@ __metadata:
       optional: true
   bin:
     hardhat: internal/cli/bootstrap.js
-  checksum: 10c0/ce0c834f23dd15eac7fd085368696260df1ce6dfd96ce019f5e8b2c90030767f74555e7a4db9a73f41540e14a61b6663575a3540258c564899b3a54343c76592
+  checksum: 10c0/d04987b1243964cb64ffd23cadf20bc1862df4e5fa1b6a9826a6152bcadd3d6080fe4b3b1f1e9bf8268de0d55ee8c4c2759184f7ed84dc5f3238631e39045640
   languageName: node
   linkType: hard
 
@@ -3318,6 +3309,13 @@ __metadata:
   version: 1.0.0
   resolution: "json-schema-traverse@npm:1.0.0"
   checksum: 10c0/71e30015d7f3d6dc1c316d6298047c8ef98a06d31ad064919976583eb61e1018a60a0067338f0f79cabc00d84af3fcc489bd48ce8a46ea165d9541ba17fb30c6
+  languageName: node
+  linkType: hard
+
+"json-stream-stringify@npm:^3.1.4":
+  version: 3.1.4
+  resolution: "json-stream-stringify@npm:3.1.4"
+  checksum: 10c0/ee5653d8b7829ac11311f732dbbc73f80a93bc6893553954266f28e76f340c5f0d24993480abe7b06f5b2166d3e0766f74b7d3170b85c347aece2b3bbb867fda
   languageName: node
   linkType: hard
 
@@ -4100,6 +4098,13 @@ __metadata:
     string_decoder: "npm:^1.1.1"
     util-deprecate: "npm:^1.0.1"
   checksum: 10c0/e37be5c79c376fdd088a45fa31ea2e423e5d48854be7a22a58869b4e84d25047b193f6acb54f1012331e1bcd667ffb569c01b99d36b0bd59658fb33f513511b7
+  languageName: node
+  linkType: hard
+
+"readdirp@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "readdirp@npm:4.0.1"
+  checksum: 10c0/e5a0b547015f68ecc918f115b62b75b2b840611480a9240cb3317090a0ddac01bb9b40315a8fa08acdf52a43eea17b808c89b645263cba3ab64dc557d7f801f1
   languageName: node
   linkType: hard
 
