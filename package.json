@@ -1,6 +1,6 @@
 {
   "name": "@skalenetwork/paymaster-interfaces",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Definitions of interfaces needed to integrate with paymaster smart contract",
   "repository": "git@github.com:skalenetwork/paymaster-interfaces.git",
   "author": "Dmytro Stebaiev <dmytro@skalelabs.com>",
