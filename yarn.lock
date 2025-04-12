@@ -1106,9 +1106,9 @@ __metadata:
   linkType: hard
 
 "@openzeppelin/contracts@npm:^5.0.2":
-  version: 5.2.0
-  resolution: "@openzeppelin/contracts@npm:5.2.0"
-  checksum: 10c0/6e2d8c6daaeb8e111d49a82c30997a6c5d4e512338b55500db7fd4340f29c1cbf35f9dcfa0dbc672e417bc84e99f5441a105cb585cd4680ad70cbcf9a24094fc
+  version: 5.3.0
+  resolution: "@openzeppelin/contracts@npm:5.3.0"
+  checksum: 10c0/b8a2d97413c24635c92de4b2a1188fa58ab252515aff38eabce4fa66bd3d8ae1649010d17fccaeb4e266bf8314c8bd92757fedca97bf643b6b98e11dea3fa83d
   languageName: node
   linkType: hard
 
