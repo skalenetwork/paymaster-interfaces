@@ -1276,7 +1276,7 @@ __metadata:
   dependencies:
     "@openzeppelin/contracts": "npm:^5.0.2"
     "@quant-finance/solidity-datetime": "npm:^2.2.0"
-    "@types/node": "npm:^22.5.5"
+    "@types/node": "npm:^24.3.3"
     cspell: "npm:^8.8.3"
     hardhat: "npm:^2.22.4"
     solhint: "npm:^5.0.1"
@@ -1361,12 +1361,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.5.5":
+"@types/node@npm:*":
   version: 22.10.5
   resolution: "@types/node@npm:22.10.5"
   dependencies:
     undici-types: "npm:~6.20.0"
   checksum: 10c0/6a0e7d1fe6a86ef6ee19c3c6af4c15542e61aea2f4cee655b6252efb356795f1f228bc8299921e82924e80ff8eca29b74d9dd0dd5cc1a90983f892f740b480df
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^24.3.3":
+  version: 24.3.3
+  resolution: "@types/node@npm:24.3.3"
+  dependencies:
+    undici-types: "npm:~7.10.0"
+  checksum: 10c0/5324108314b3d9abaafd82ea04a91ea6904580c1fbe47c52600881ae250fef3b2d3d28c7d68cb979b07241d29fe889b66bd9f92346902bea65a3e562937c7d9a
   languageName: node
   linkType: hard
 
@@ -4669,6 +4678,13 @@ __metadata:
   version: 6.20.0
   resolution: "undici-types@npm:6.20.0"
   checksum: 10c0/68e659a98898d6a836a9a59e6adf14a5d799707f5ea629433e025ac90d239f75e408e2e5ff086afc3cace26f8b26ee52155293564593fbb4a2f666af57fc59bf
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~7.10.0":
+  version: 7.10.0
+  resolution: "undici-types@npm:7.10.0"
+  checksum: 10c0/8b00ce50e235fe3cc601307f148b5e8fb427092ee3b23e8118ec0a5d7f68eca8cee468c8fc9f15cbb2cf2a3797945ebceb1cbd9732306a1d00e0a9b6afa0f635
   languageName: node
   linkType: hard
 
