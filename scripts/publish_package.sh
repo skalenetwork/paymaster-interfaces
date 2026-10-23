@@ -9,12 +9,6 @@ then
     echo "$USAGE_MSG"
     exit 1
 fi
-if [ -z "$NODE_AUTH_TOKEN" ]
-then
-    (>&2 echo 'You should provide a node auth token')
-    echo "$USAGE_MSG"
-    exit 2
-fi
 
 cd "$(dirname "$0")/.."
 
@@ -45,7 +39,6 @@ echo -E "${package}" > package.json
 
 touch yarn.lock
 yarn config set enableImmutableInstalls false
-yarn config set npmAuthToken "$NODE_AUTH_TOKEN"
 yarn
 
-yarn npm publish --access public $TAG
+yarn npm publish --access public $TAG --provenance
